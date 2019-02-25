@@ -11,11 +11,18 @@ class ExternalAdapter {
     this.config = config;
     this.capabilities = capabilities;
     this.specs = specs;
+
+    if (this.config.externalFrameworkOptions && this.config.externalFrameworkOptions.adapter) {
+      this.adapter = new this.config.externalFrameworkOptions.adapter(cid, config, specs, capabilities, reporter);
+    }
   }
 
   async run() {
     const self = this;
-
+    let result = null;
+    if (this.adapter) {
+      result = this.adapter.run();
+    }
     return result;
   }
 }
