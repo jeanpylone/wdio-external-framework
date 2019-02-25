@@ -1,0 +1,12 @@
+{
+  "name": "wdio-external-framework",
+  "version": "0.0.1",
+  "description": "A WebdriverIO plugin. Adapter for externally loaded testing framework.",
+  "main": "/build/index",
+  "author": "Jean-Philippe Schneider <jeanpylone@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanpylone/wdio-external-framework.git"
+  },
+  "license": "MIT"
+}
