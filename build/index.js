@@ -17,6 +17,15 @@ class ExternalAdapter {
     }
   }
 
+  async init() {
+    const self = this;
+    let result = null;
+    if (this.adapter) {
+      result = this.adapter.init();
+    }
+    return result;
+  }
+  
   async run() {
     const self = this;
     let result = null;
