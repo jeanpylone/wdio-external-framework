@@ -33,7 +33,7 @@ class ExternalAdapter {
 const adapterFactory = {};
 adapterFactory.init = async function (...args) {
   const adapter = new ExternalAdapter(...args);
-  const result = await adapter.run();
+  const result = await adapter.init();
   return result;
 };
 
