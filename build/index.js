@@ -21,7 +21,7 @@ class ExternalAdapter {
     const self = this;
     let result = null;
     if (this.adapter) {
-      result = this.adapter.init();
+      result = await this.adapter.init();
     }
     return result;
   }
@@ -30,7 +30,7 @@ class ExternalAdapter {
     const self = this;
     let result = null;
     if (this.adapter) {
-      result = this.adapter.run();
+      result = await this.adapter.run();
     }
     return result;
   }
